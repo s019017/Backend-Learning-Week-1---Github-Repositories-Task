@@ -8,18 +8,13 @@
 
 const USE_LOCAL_FILES = false;
 
+/**
+ * 
+ * @param {string} username Username of the github account being targeted
+ * @returns JSON file of the target accounts repositories
+ */
+
 async function getRepos(username){
-    /**
-     * Fetches the repos from the source selected 
-     */
-    /*const response = await fetch(
-        `https://api.github.com/users/${username}/repos`
-    );
-    
-    const response = await fetch(
-        'repos.json'
-    )
-    */
 
     
     const address = USE_LOCAL_FILES
@@ -38,7 +33,7 @@ async function getRepos(username){
     return response.json()
 };
 
-let x = 'jellyboy24';
+let x = 's019017';
 
 function showRepos(repos){
     const list = document.querySelector('#repos');
